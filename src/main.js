@@ -63,10 +63,10 @@ function renderApp() {
           <span class="text-[10px] text-emerald-400 font-bold tracking-[0.25em] uppercase">La Bella Esmeralda de los Andes</span>
         </div>
       </div>
-      <div class="hidden md:flex items-center gap-10 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">
-        <button onclick="window.setView('catalogo')" class="${currentView === 'catalogo' ? 'text-emerald-400 border-b-2 border-emerald-400 pb-1' : 'hover:text-emerald-400 transition-all underline-animation'}">Catálogo</button>
-        <button onclick="window.setView('mapa')" class="${currentView === 'mapa' ? 'text-emerald-400 border-b-2 border-emerald-400 pb-1' : 'hover:text-emerald-400 transition-all underline-animation'}">Rutas GPS</button>
-        <a href="#" class="hover:text-emerald-400 transition-all underline-animation">Festividades</a>
+      <div class="hidden md:flex items-center gap-8 text-[10px] font-black text-slate-400 tracking-[0.3em]">
+        <button onclick="window.setView('catalogo')" class="uppercase transition-all ${currentView === 'catalogo' ? 'text-emerald-400 border-b-2 border-emerald-400 pb-1' : 'hover:text-emerald-400'}">Catálogo</button>
+        <button onclick="window.setView('mapa')" class="uppercase transition-all ${currentView === 'mapa' ? 'text-emerald-400 border-b-2 border-emerald-400 pb-1' : 'hover:text-emerald-400'}">Rutas GPS</button>
+        <button class="uppercase transition-all hover:text-emerald-400">Festividades</button>
       </div>
       <button class="md:hidden p-3 hover:bg-white/5 rounded-2xl text-slate-400">
         <i data-lucide="menu"></i>
@@ -147,24 +147,25 @@ function renderMapCatalog() {
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       ${zones.map(zone => `
         <div class="bg-slate-900/60 border-2 border-white/5 rounded-[3rem] p-8 lg:p-10 flex flex-col gap-8 transition-all hover:border-emerald-500/30 shadow-2xl ${activeMapId === zone.id ? 'border-emerald-500/50 scale-[1.02]' : ''}">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div class="flex items-center gap-6">
-               <div class="w-20 h-20 bg-white/5 rounded-[2rem] flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-2xl">
-                 <img src="${zone.image}" class="w-full h-full object-cover" />
+          <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+            <div class="flex items-center gap-5 flex-1 min-w-0">
+               <div class="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-white/5 rounded-[2rem] flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-2xl group/thumb relative transition-all duration-500 hover:border-emerald-500/40">
+                 <img src="${zone.image}" class="w-full h-full object-cover transition-transform duration-700 group-hover/thumb:scale-110" />
+                 <div class="absolute inset-0 bg-emerald-500/10 opacity-0 group-hover/thumb:opacity-100 transition-opacity"></div>
                </div>
-               <div>
-                 <h3 class="font-black text-white text-2xl md:text-3xl tracking-tighter">${zone.name}</h3>
-                 <span class="text-[11px] text-emerald-500 uppercase font-black tracking-[0.3em] font-outfit mt-1 block">${zone.category}</span>
+               <div class="flex-1 min-w-0">
+                 <h3 class="font-black text-white text-xl md:text-2xl lg:text-3xl tracking-tighter leading-[1.2]">${zone.name}</h3>
+                 <span class="text-[10px] text-emerald-500 uppercase font-black tracking-[0.2em] md:tracking-[0.3em] font-outfit mt-1.5 block opacity-90">${zone.category}</span>
                </div>
             </div>
             
-            <div class="flex gap-4">
-               <button onclick="window.toggleMap(${zone.id})" class="flex-1 md:flex-none px-7 py-4 bg-white/5 border border-white/10 text-white rounded-2xl text-[11px] font-black hover:bg-white/10 transition-all flex items-center justify-center gap-3 uppercase tracking-widest outline-none shadow-xl">
-                 <i data-lucide="${activeMapId === zone.id ? 'eye-off' : 'map-pinned'}" class="w-5 h-5"></i>
+            <div class="flex gap-3 flex-shrink-0">
+               <button onclick="window.toggleMap(${zone.id})" class="flex-1 xl:flex-none px-6 py-3.5 bg-white/5 border border-white/10 text-white rounded-xl text-[10px] font-black hover:bg-white/10 transition-all flex items-center justify-center gap-2.5 uppercase tracking-widest outline-none shadow-xl">
+                 <i data-lucide="${activeMapId === zone.id ? 'eye-off' : 'map-pinned'}" class="w-4 h-4"></i>
                  ${activeMapId === zone.id ? 'Ocultar' : 'Mapa'}
                </button>
-               <a href="${zone.routeUrl}" target="_blank" class="flex-1 md:flex-none px-7 py-4 bg-emerald-600 text-white rounded-2xl text-[11px] font-black hover:bg-emerald-500 transition-all shadow-2xl flex items-center justify-center gap-3 uppercase tracking-widest shadow-emerald-600/20">
-                 <i data-lucide="route" class="w-5 h-5"></i>
+               <a href="${zone.routeUrl}" target="_blank" class="flex-1 xl:flex-none px-6 py-3.5 bg-emerald-600 text-white rounded-xl text-[10px] font-black hover:bg-emerald-500 transition-all shadow-2xl flex items-center justify-center gap-2.5 uppercase tracking-widest shadow-emerald-600/20">
+                 <i data-lucide="route" class="w-4 h-4"></i>
                  Ruta
                </a>
             </div>

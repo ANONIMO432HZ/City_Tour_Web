@@ -50,7 +50,7 @@ Para ejecutar este proyecto localmente, asegúrate de tener instalado [Node.js](
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/ANONIMO432HZ/citystatus-web.git
+   git clone https://github.com/ANONIMO432HZ/City_Tour_Web.git
    ```
 
 2. **Instalar dependencias**:
@@ -71,4 +71,4 @@ Desarrollado con pasión para promover la riqueza paisajística y cultural de Hu
 
 ---
 
-**HuantaStatus** - *"Explora la magia de los Andes con un solo clic."*
+**HuantaTour** - *"Explora la magia de los Andes con un solo clic."*
