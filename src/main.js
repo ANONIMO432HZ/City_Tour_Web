@@ -252,6 +252,7 @@ window.openModalByIdx = (idx) => {
   const modal = document.querySelector('#image-modal')
   modal.classList.remove('hidden')
   modal.classList.add('flex')
+  modal.scrollTop = 0 // Reset scroll al abrir nueva imagen
   document.body.style.overflow = 'hidden'
 }
 
