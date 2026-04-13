@@ -1,79 +1,103 @@
 import './style.css'
 
-// Catálogo enriquecido de Huanta, Ayacucho (Basado en RedBus y fuentes locales)
+// Catálogo HuantaTour con lenguaje natural y amigable (Basado en RedBus y fuentes locales)
 const imageFiles = [
   { 
     file: "plaza_de_armas_de_huanta.png", 
     name: "Plaza de Armas e Iglesia Matriz", 
     category: "Ciudad", 
-    brief: "El corazón de la ciudad con su histórica Iglesia San Pedro de 1724.",
-    desc: "La Plaza de Armas es el punto de inicio ideal. Aquí verás la Iglesia San Pedro de Huanta, que data de 1724, con sus dos torres de estilo gótico, relojes y campanas francesas. Los locales cercanos ofrecen deliciosos chicharrones para un desayuno tradicional."
+    desc: "La Plaza de Armas es el punto de inicio ideal. Aquí podrás admirar la imponente Iglesia San Pedro de Huanta, que data de 1724, con sus dos torres góticas y campanas francesas. ¡No te vayas sin probar los famosos chicharrones en los locales cercanos!",
+    map: "https://www.google.com/maps/search/?api=1&query=Plaza+de+Armas+Huanta"
   },
   { 
     file: "boques-de-piedra-de-Laupay.jpg", 
     name: "Bosque de Piedras de Laupay", 
     category: "Naturaleza",
-    brief: "Paisaje místico con figuras poliformas de piedra a 3 horas de la ciudad.",
-    desc: "Un espacio mágico con figuras poliformas de piedra que se asemejan a humanos, animales y plantas. Es un destino virgen ideal para el trekking y camping, famoso por la claridad de sus estrellas durante la noche."
+    desc: "Un espacio mágico lleno de figuras poliformas de piedra que parecen cobrar vida como humanos o animales. Es un destino virgen perfecto para el trekking y camping, donde las estrellas brillan con una claridad asombrosa durante la noche.",
+    map: "https://www.google.com/maps/search/?api=1&query=Bosque+de+Piedras+Laupay+Huanta"
   },
   { 
     file: "nevado_razuhuillca.png", 
     name: "Nevado y Lagunas de Razuhuillca", 
-    category: "Naturaleza",
-    brief: "El guardián de Huanta con lagunas glaciares a más de 4000 msnm.",
-    desc: "Ubicado a una hora de la ciudad, este circuito incluye el majestuoso nevado y las lagunas Chacaqocha, Escoqocha, Yanaqocha y San Antonio. El trekking llega a los 4100 msnm, ofreciendo un contacto único con la flora y fauna de la zona."
+    category: "Aventura",
+    desc: "El guardián místico de Huanta. Este circuito te lleva por el majestuoso nevado y sus lagunas de colores intensos como Chacaqocha y Yanaqocha. Alcanzar los 4100 msnm te regalará una conexión única con la flora y fauna altoandina.",
+    map: "https://www.google.com/maps/search/?api=1&query=Nevado+Razuhuillca+Huanta"
   },
   { 
     file: "mirador_cristo_blanco.png", 
     name: "Mirador Cristo Blanco", 
-    category: "Miradores",
-    brief: "Escultura icónica con la mejor vista panorámica de todo el valle.",
-    desc: "Sitio emblemático donde se encuentra la escultura gigante visible desde cualquier parte de Huanta. Es el lugar perfecto para tomar fotografías panorámicas del valle y admirar la naturaleza en todo su esplendor."
+    category: "Mirador",
+    desc: "La escultura gigante que vigila todo el valle. Es el sitio preferido por los viajeros para tomar esas fotografías panorámicas que parecen postales. Un lugar de paz para admirar la naturaleza en todo su esplendor.",
+    map: "https://maps.app.goo.gl/2qejaMmXHDPHtAtW8"
   },
   { 
     file: "catarata_paccha_cucho_sirenachayoq.png", 
     name: "Catarata Paccha Cucho", 
     category: "Naturaleza",
-    brief: "Impresionante caída de agua cristalina rodeada de selva alta.",
-    desc: "Una de las caídas de agua más bellas de la zona, conocida como Sirenachayoq. Sus aguas cristalinas y el entorno verde ofrecen una conexión directa con la naturaleza y un espacio de relajación total."
+    desc: "Conocida como Sirenachayoq, es una de las caídas de agua más hermosas y relajantes. Sus aguas cristalinas y el entorno verde profundo te invitan a desconectar del mundo y disfrutar del sonido de la selva alta.",
+    map: "https://www.google.com/maps/search/?api=1&query=Catarata+Paccha+Cucho+Huanta"
   },
   { 
     file: "santuario_señor_de_maynay.png", 
     name: "Santuario Señor de Maynay", 
     category: "Religioso",
-    brief: "Hogar del patrón de Huanta y centro de la gran feria regional.",
-    desc: "Un lugar de profunda fe católica. El santuario es el centro de las festividades en septiembre, donde se realiza la famosa Feria de Maynay, celebrando la agricultura, ganadería y artesanía de la región."
+    desc: "Centro de una profunda fe católica y hogar de la feria más importante de la región. En septiembre, este lugar se llena de vida celebrando la agricultura, ganadería y artesanía huanteña en honor a su patrón.",
+    map: "https://www.google.com/maps/search/?api=1&query=Santuario+Señor+de+Maynay+Huanta"
   },
   { 
     file: "arco_de_la_memoria.png", 
     name: "Arco de la Memoria", 
     category: "Cultura",
-    brief: "Monumento histórico que marca la entrada triunfal a la ciudad.",
-    desc: "Ubicado en la entrada de Huanta, este monumento histórico conmemora la valentía y el espíritu de los pobladores huanteños a lo largo de la historia peruana."
+    desc: "Ubicado en la entrada triunfal de la ciudad, este monumento rinde homenaje a la valentía y el espíritu inquebrantable de los pobladores huanteños a lo largo de nuestra historia.",
+    map: "https://www.google.com/maps/search/?api=1&query=Arco+de+la+Memoria+Huanta"
   },
   { 
     file: "laguna_verde_qocha_esmeralda.png", 
     name: "Laguna Verde Qocha", 
     category: "Naturaleza",
-    brief: "Famosa por sus aguas de color esmeralda intenso y misticismo.",
-    desc: "Una de las lagunas más hermosas de la cordillera de Razuhuillca. Su color verde esmeralda y el reflejo de las montañas crean un paisaje de ensueño para los amantes de la fotografía."
+    desc: "Su color esmeralda intenso parece sacado de un sueño. Rodeada de montañas que se reflejan en sus aguas tranquilas, es un paraíso para los amantes de la fotografía y el misticismo andino.",
+    map: "https://www.google.com/maps/search/?api=1&query=Laguna+Verde+Qocha+Huanta"
   },
-  { file: "atardecer_huanta.png", name: "Atardecer Huantino", category: "Naturaleza", brief: "Cielos de colores intensos sobre el valle altoandino.", desc: "Los atardeceres en Huanta son famosos por sus tonos rojizos y violetas que bañan el valle de 'La Esmeralda de los Andes'." },
-  { file: "catarata_potrero.png", name: "Catarata Potrero", category: "Naturaleza", brief: "Salto de agua escondido entre montañas, ideal para el senderismo.", desc: "Ubicada cerca de la comunidad de Potrero, esta catarata es un tesoro natural poco explorado pero de gran belleza." },
-  { file: "convento_sagrado_corazon_de_jesus.png", name: "Convento Sagrado Corazón", category: "Religioso", brief: "Arquitectura religiosa imponente y patrimonio cultural.", desc: "Un templo de paz y espiritualidad que destaca por su diseño arquitectónico y su importancia histórica para las congregaciones locales." },
-  { file: "cuidadela_huayra_patamarca.png", name: "Ciudadela Huayra Patamarca", category: "Cultura", brief: "Restos prehispánicos en las cumbres que vigilan el valle.", desc: "Sitio arqueológico que evidencia la presencia de civilizaciones antiguas que dominaron el manejo de las alturas en Huanta." },
-  { file: "laguna_8_huayllay.png", name: "Laguna 8 Huayllay", category: "Naturaleza", brief: "Misteriosa laguna de altura rodeada de pampa altoandina.", desc: "Parte del sistema hídrico de las alturas de Huanta, ofrece un paisaje desolado pero majestuoso típico de la puna." },
-  { file: "laguna_chacaccocha_razuhuillca.png", name: "Laguna Chacaccocha", category: "Naturaleza", brief: "Espejo de agua glaciar a los pies de las nieves eternas.", desc: "Ubicada en la base del nevado principal, es la primera de las grandes lagunas que se visitan en la ruta de Razuhuillca." },
-  { file: "laguna_yanaccocha.png", name: "Laguna Yanaccocha", category: "Naturaleza", brief: "Laguna 'Negra' conocida por sus aguas oscuras y profundas.", desc: "Llamada así por la profundidad y el color de sus aguas, rodeada de mitos y leyendas locales sobre los espíritus de la montaña." },
-  { file: "lagunas_de_huaper.png", name: "Lagunas de Huaper", category: "Naturaleza", brief: "Conjunto de lagunas rodeadas de una biodiversidad única.", desc: "Un ecosistema frágil y hermoso donde se pueden observar aves migratorias y ganado altoandino en su hábitat natural." },
-  { file: "mirrador_cañon_de_huatuscalle.png", name: "Cañón de Huatuscalle", category: "Miradores", brief: "Profundo cañón con formaciones geológicas impresionantes.", desc: "Desde este mirador se puede apreciar la profundidad del cañón esculpido por el paso de los siglos y la fuerza del agua." },
-  { file: "parque_de_los_heroes.png", name: "Parque de los Héroes", category: "Cultura", brief: "Solemne espacio dedicado a los valientes de la provincia.", desc: "Un lugar de reunión familiar y respeto histórico, rodeado de áreas verdes y bustos conmemorativos." },
-  { file: "parroquia_san_pedro_matriz.png", name: "Parroquia San Pedro Matriz", category: "Religioso", brief: "La cúpula que destaca en el horizonte urbano de Huanta.", desc: "Complemento espiritual de la plaza principal, famosa por sus festividades y la calidez de su comunidad parroquial." },
-  { file: "pozas_esmeralda_de_mayocc.png", name: "Pozas Esmeralda Mayocc", category: "Naturaleza", brief: "Pocitos naturales de color turquesa junto al río Mantaro.", desc: "Ubicadas en el límite con Huancavelica, estas pozas de agua tibia y color turquesa son un paraíso tropical en los Andes." },
-  { file: "puente_huarpa.png", name: "Puente Huarpa", category: "Cultura", brief: "Puente histórico sobre el río que separa regiones.", desc: "Estructura vital que une Ayacucho con otras regiones, ofreciendo vistas espectaculares del cañón del río Huarpa." },
-  { file: "puente_rumichaca.png", name: "Puente Rumichaca", category: "Cultura", brief: "Ancestral puente de piedra símbolo de la ingeniería colonial.", desc: "Su nombre significa 'Puente de Piedra'. Es un testimonio de la durabilidad de la arquitectura colonial en rutas comerciales antiguas." },
-  { file: "mirador_cristo_blando_panoramico.jpg", name: "Vista Panorámica de Huanta", category: "Miradores", brief: "El valle en toda su magnitud desde las alturas de la ciudad.", desc: "Captura la esencia de 'La Esmeralda de los Andes', mostrando por qué Huanta es considerada uno de los valles más fértiles y hermosos del Perú." },
-  { file: "Plaza-de-Armas-Huanta.jpg", name: "Plaza de Armas (Sunset)", category: "Ciudad", brief: "La luz dorada bañando la cuna del turismo ayacuchano.", desc: "La plaza en su hora más mágica, cuando las luces se encienden y el cielo se tiñe de colores sobre la Iglesia San Pedro." }
+  { 
+    file: "atardecer_huanta.png", 
+    name: "Atardecer Huantino", 
+    category: "Paisaje", 
+    desc: "Los cielos de Huanta se tiñen de rojos y violetas al caer el sol, recordándonos por qué llaman a este valle 'La Esmeralda de los Andes'. Un espectáculo natural gratuito cada tarde.",
+    map: "https://www.google.com/maps/search/?api=1&query=Valle+de+Huanta+Ayacucho" 
+  },
+  { 
+    file: "catarata_potrero.png", 
+    name: "Catarata Potrero", 
+    category: "Naturaleza", 
+    desc: "Un tesoro natural escondido que recompensa a los aventureros con un salto de agua refrescante tras una caminata entre montañas. Ideal para quienes buscan salirse de la ruta tradicional.",
+    map: "https://www.google.com/maps/search/?api=1&query=Catarata+Potrero+Huanta" 
+  },
+  { file: "convento_sagrado_corazon_de_jesus.png", name: "Convento Sagrado Corazón", category: "Religioso", desc: "Arquitectura religiosa que impone por su diseño y paz interior. Un patrimonio espiritual que ha acogido a generaciones de huanteños en busca de reflexión.", map: "https://www.google.com/maps/search/?api=1&query=Convento+Sagrado+Corazón+Huanta" },
+  { file: "cuidadela_huayra_patamarca.png", name: "Ciudadela Huayra Patamarca", category: "Arqueología", desc: "Restos prehispánicos que desafiaron las alturas en las cumbres que vigilan el valle. Un testimonio mudo de la grandeza de las civilizaciones que habitaron estas tierras.", map: "https://www.google.com/maps/search/?api=1&query=Ciudadela+Huayra+Patamarca+Huanta" },
+  { file: "laguna_8_huayllay.png", name: "Laguna 8 Huayllay", category: "Naturaleza", desc: "Una misteriosa laguna rodeada de la inmensidad de la pampa altoandina. El aire puro y el silencio de la altura te harán sentir en la cima del mundo.", map: "https://www.google.com/maps/search/?api=1&query=Laguna+Huayllay+Huanta" },
+  { file: "laguna_chacaccocha_razuhuillca.png", name: "Laguna Chacaccocha", category: "Naturaleza", desc: "Este espejo de agua glaciar reposa a los pies de las nieves eternas, siendo la puerta de entrada para descubrir los secretos de la cordillera de Razuhuillca.", map: "https://www.google.com/maps/search/?api=1&query=Laguna+Chacaccocha+Huanta" },
+  { file: "laguna_yanaccocha.png", name: "Laguna Yanaccocha", category: "Naturaleza", desc: "Conocida como la 'Laguna Negra', sus aguas oscuras y profundas están rodeadas de mitos que fascinan a cada visitante. Un lugar cargado de energía andina.", map: "https://www.google.com/maps/search/?api=1&query=Laguna+Yanaccocha+Huanta" },
+  { file: "lagunas_de_huaper.png", name: "Lagunas de Huaper", category: "Naturaleza", desc: "Un conjunto hídrico lleno de vida donde el ganado altoandino y las aves migratorias encuentran un refugio natural de una belleza singular.", map: "https://www.google.com/maps/search/?api=1&query=Lagunas+de+Huaper+Huanta" },
+  { file: "mirrador_cañon_de_huatuscalle.png", name: "Cañón de Huatuscalle", category: "Mirador", desc: "Desde aquí podrás apreciar la fuerza del tiempo esculpida en piedra. Un cañón profundo con geologías impresionantes que te harán sentir la escala de la naturaleza.", map: "https://www.google.com/maps/search/?api=1&query=Cañón+de+Huatuscalle+Huanta" },
+  { file: "parque_de_los_heroes.png", name: "Parque de los Héroes", category: "Cultura", desc: "Un espacio de reunión familiar y respeto histórico. Sus bustos y áreas verdes invitan a pasear mientras recordamos la valentía de quienes forjaron nuestra provincia.", map: "https://www.google.com/maps/search/?api=1&query=Parque+de+los+Héroes+Huanta" },
+  { file: "parroquia_san_pedro_matriz.png", name: "Parroquia San Pedro Matriz", category: "Religioso", desc: "La cúpula que domina el horizonte de Huanta. Más que un edificio, es el corazón espiritual de nuestra comunidad y el lugar donde se celebran nuestras tradiciones más queridas.", map: "https://www.google.com/maps/search/?api=1&query=Parroquia+San+Pedro+Huanta" },
+  { file: "pozas_esmeralda_de_mayocc.png", name: "Pozas Esmeralda Mayocc", category: "Naturaleza", desc: "En el límite con Huancavelica, estas pozas de agua tibia y color turquesa son el refugio perfecto para relajarse junto al imponente río Mantaro.", map: "https://www.google.com/maps/search/?api=1&query=Pozas+Esmeralda+Mayocc" },
+  { file: "puente_huarpa.png", name: "Puente Huarpa", category: "Arquitectura", desc: "Estructura histórica que une pueblos y regiones sobre el río Huarpa. Un hito de ingeniería con vistas panorámicas que no puedes dejar de fotografiar.", map: "https://www.google.com/maps/search/?api=1&query=Puente+Huarpa+Ayacucho" },
+  { file: "puente_rumichaca.png", name: "Puente Rumichaca", category: "Arquitectura", desc: "Construido en piedra, este puente colonial ha resistido el paso de los siglos como un símbolo de la ingeniería duradera y las rutas comerciales de antaño.", map: "https://www.google.com/maps/search/?api=1&query=Puente+Rumichaca+Huanta" },
+  { 
+    file: "mirador_cristo_blando_panoramico.jpg", 
+    name: "Vista Panorámica de Huanta", 
+    category: "Mirador", 
+    desc: "Toda la 'Esmeralda de los Andes' a tus pies en una sola mirada. Captura la inmensidad del valle y la disposición orgánica de nuestra bella ciudad desde las alturas.", 
+    map: "https://www.google.com/maps/search/?api=1&query=Mirador+Huanta+Ayacucho" 
+  },
+  { 
+    file: "Plaza-de-Armas-Huanta.jpg", 
+    name: "Plaza de Armas (Sunset)", 
+    category: "Ciudad", 
+    desc: "La plaza en su hora más mágica, cuando la luz dorada baña nuestra pileta central y palmeras, iluminando el espíritu de todo aquel que la recorre al caer el sol.", 
+    map: "https://www.google.com/maps/search/?api=1&query=Plaza+de+Armas+Huanta" 
+  }
 ]
 
 let currentFilter = 'Todos'
@@ -83,14 +107,14 @@ let filteredZones = []
 const zones = imageFiles.map((img, index) => ({
   id: index,
   name: img.name,
-  image: `/img/${img.file}`,
+  image: `/img/${img.file}`, // Ruta corregida según cambio manual
   status: index % 4 === 0 ? "busy" : "open",
   occupancy: Math.floor(Math.random() * 60) + 10,
   lastUpdate: `Hace ${Math.floor(Math.random() * 15) + 2} min`,
   category: img.category,
   address: "Huanta, Ayacucho",
-  brief: img.brief,
-  description: img.desc
+  description: img.desc,
+  mapUrl: img.map
 }))
 
 const statusConfig = {
@@ -120,7 +144,7 @@ function renderApp() {
         <a href="#" class="hover:text-emerald-400 transition-colors">Mapa</a>
         <a href="#" class="hover:text-emerald-400 transition-colors">Festividades</a>
       </div>
-      <button class="md:hidden p-2 hover:bg-white/5 rounded-lg">
+      <button class="md:hidden p-2 hover:bg-white/5 rounded-lg text-slate-400">
         <i data-lucide="menu"></i>
       </button>
     </nav>
@@ -132,18 +156,23 @@ function renderApp() {
       <div class="max-w-4xl mx-auto text-center">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-           Estado Turístico Actual
+           Guía Turística Oficial
         </div>
         <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
           Explora la Bella <br/>
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500"> Esmeralda de los Andes.</span>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500">Esmeralda de los Andes.</span>
         </h1>
         <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
-          Conoce la afluencia y el encanto de los ${zones.length} destinos más emblemáticos. Haz clic para ampliar.
+          Conoce la ubicación exacta y el encanto de los ${zones.length} destinos más emblemáticos de Huanta.
         </p>
-        <a href="#catalogo" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold text-sm transition-all shadow-2xl shadow-emerald-600/40 inline-block">
-          Explorar Catálogo
-        </a>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+          <a href="#catalogo" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold text-sm transition-all shadow-2xl shadow-emerald-600/40 inline-block">
+            Explorar Catálogo
+          </a>
+          <button class="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-bold text-sm hover:bg-white/10 transition-all">
+            Mapa Interactivo
+          </button>
+        </div>
       </div>
     </header>
 
@@ -152,13 +181,13 @@ function renderApp() {
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-white/5 pb-8">
         <div>
           <h2 class="text-3xl font-bold mb-2">Galería de Destinos</h2>
-          <p class="text-slate-500 text-sm italic">Mostrando las ${zones.length} maravillas huanteñas.</p>
+          <p class="text-slate-500 text-sm italic">Haz clic en una imagen para ver detalles y ubicación GPS.</p>
         </div>
         <div class="flex flex-wrap gap-2">
-          ${['Todos', 'Naturaleza', 'Cultura', 'Religioso', 'Ciudad', 'Miradores'].map(cat => `
+          ${['Todos', 'Naturaleza', 'Cultura', 'Religioso', 'Ciudad', 'Mirador', 'Aventura', 'Arqueología', 'Paisaje', 'Arquitectura'].map(cat => `
             <button 
               onclick="window.setFilter('${cat}')"
-              class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all ${currentFilter === cat ? 'bg-emerald-600/20 border-emerald-500/30 text-emerald-400' : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white'}"
+              class="px-5 py-2.5 rounded-xl text-[10px] font-bold transition-all ${currentFilter === cat ? 'bg-emerald-600/20 border-emerald-500/30 text-emerald-400' : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white'}"
             >
               ${cat}
             </button>
@@ -195,7 +224,7 @@ function renderCard(zone, idx) {
            </div>
         </div>
 
-        <div class="absolute top-4 left-4">
+        <div class="absolute top-4 left-4 flex gap-2">
           <span class="px-3 py-1.5 rounded-full text-[9px] font-black border flex items-center gap-1.5 ${cfg.color} backdrop-blur-xl uppercase tracking-widest shadow-xl">
             <i data-lucide="${cfg.icon}" class="w-3 h-3"></i>
             ${cfg.label}
@@ -206,7 +235,7 @@ function renderCard(zone, idx) {
       <div class="p-6 relative">
         <span class="text-[9px] text-emerald-500 font-black mb-1 block uppercase tracking-[0.2em] font-outfit">${zone.category}</span>
         <h3 class="text-lg font-bold text-white mb-2 line-clamp-1">${zone.name}</h3>
-        <p class="text-slate-500 text-[11px] leading-relaxed mb-4 line-clamp-2">${zone.brief || zone.description}</p>
+        <p class="text-slate-500 text-[11px] leading-relaxed mb-4 line-clamp-2">${zone.description}</p>
         
         <div class="flex items-center justify-between border-t border-white/5 pt-4">
            <div class="h-1 flex-1 bg-white/5 rounded-full overflow-hidden mr-4">
@@ -241,6 +270,7 @@ function updateModalContent() {
   const modalTitle = document.querySelector('#modal-title')
   const modalDesc = document.querySelector('#modal-desc')
   const modalCategory = document.querySelector('#modal-category')
+  const mapLink = document.querySelector('#map-link')
 
   modalImg.style.opacity = '0'
   modalImg.style.transform = 'scale(0.95)'
@@ -250,6 +280,7 @@ function updateModalContent() {
     modalTitle.textContent = zone.name
     modalDesc.textContent = zone.description
     modalCategory.textContent = zone.category
+    if (mapLink) mapLink.href = zone.mapUrl
     
     modalImg.style.opacity = '1'
     modalImg.style.transform = 'scale(1)'
@@ -272,8 +303,8 @@ function setupModalEvents() {
     const swipeThreshold = 50
     const diff = touchStartX - touchEndX
     if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) nextImg() // Swipe Left -> Next
-      else prevImg() // Swipe Right -> Prev
+      if (diff > 0) nextImg()
+      else prevImg()
     }
   }
 
@@ -299,16 +330,8 @@ function setupModalEvents() {
   prevBtn?.addEventListener('click', prevImg)
   nextBtn?.addEventListener('click', nextImg)
 
-  // Touch Events for Swipe
-  modal?.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX
-  }, { passive: true })
-
-  modal?.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX
-    handleSwipe()
-  }, { passive: true })
-
+  modal?.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX }, { passive: true })
+  modal?.addEventListener('touchend', (e) => { touchEndX = e.changedTouches[0].screenX; handleSwipe() }, { passive: true })
   modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); })
 
   document.addEventListener('keydown', (e) => {

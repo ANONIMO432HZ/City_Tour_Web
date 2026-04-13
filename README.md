@@ -1,8 +1,8 @@
-# 🏔️ HuantaStatus: La Esmeralda de los Andes
+# 🏔️ HuantaTour: La Bella Esmeralda de los Andes
 
-![Huanta Status Preview](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin.svg)
+![Huanta Tour Preview](https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/map-pin.svg)
 
-**HuantaStatus** es una plataforma web premium diseñada para potenciar el turismo en la provincia de Huanta, Ayacucho. Proporciona una guía interactiva y visual de los 25 destinos turísticos más emblemáticos de la región, ofreciendo información detallada y una experiencia de usuario moderna y fluida.
+**HuantaTour** es una plataforma web premium diseñada para potenciar el turismo en la provincia de Huanta, Ayacucho. Proporciona una guía interactiva y visual de los 25 destinos turísticos más emblemáticos de la región, ofreciendo información detallada y una experiencia de usuario moderna y fluida.
 
 ---
 
