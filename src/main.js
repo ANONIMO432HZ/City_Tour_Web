@@ -69,7 +69,6 @@ const imageFiles = [
   { file: "mirrador_cañon_de_huatuscalle.png", name: "Cañón de Huatuscalle", category: "Miradores", brief: "Profundo cañón con formaciones geológicas impresionantes.", desc: "Desde este mirador se puede apreciar la profundidad del cañón esculpido por el paso de los siglos y la fuerza del agua." },
   { file: "parque_de_los_heroes.png", name: "Parque de los Héroes", category: "Cultura", brief: "Solemne espacio dedicado a los valientes de la provincia.", desc: "Un lugar de reunión familiar y respeto histórico, rodeado de áreas verdes y bustos conmemorativos." },
   { file: "parroquia_san_pedro_matriz.png", name: "Parroquia San Pedro Matriz", category: "Religioso", brief: "La cúpula que destaca en el horizonte urbano de Huanta.", desc: "Complemento espiritual de la plaza principal, famosa por sus festividades y la calidez de su comunidad parroquial." },
-  { file: "portada.png", name: "Portada Huantina", category: "Cultura", brief: "Antigua entrada principal con el sello distintivo de la ciudad.", desc: "Un hito arquitectónico que representa la elegancia de las casonas antiguas y la bienvenida al valle." },
   { file: "pozas_esmeralda_de_mayocc.png", name: "Pozas Esmeralda Mayocc", category: "Naturaleza", brief: "Pocitos naturales de color turquesa junto al río Mantaro.", desc: "Ubicadas en el límite con Huancavelica, estas pozas de agua tibia y color turquesa son un paraíso tropical en los Andes." },
   { file: "puente_huarpa.png", name: "Puente Huarpa", category: "Cultura", brief: "Puente histórico sobre el río que separa regiones.", desc: "Estructura vital que une Ayacucho con otras regiones, ofreciendo vistas espectaculares del cañón del río Huarpa." },
   { file: "puente_rumichaca.png", name: "Puente Rumichaca", category: "Cultura", brief: "Ancestral puente de piedra símbolo de la ingeniería colonial.", desc: "Su nombre significa 'Puente de Piedra'. Es un testimonio de la durabilidad de la arquitectura colonial en rutas comerciales antiguas." },
@@ -84,7 +83,7 @@ let filteredZones = []
 const zones = imageFiles.map((img, index) => ({
   id: index,
   name: img.name,
-  image: `/imagenes/${img.file}`,
+  image: `/img/${img.file}`,
   status: index % 4 === 0 ? "busy" : "open",
   occupancy: Math.floor(Math.random() * 60) + 10,
   lastUpdate: `Hace ${Math.floor(Math.random() * 15) + 2} min`,
@@ -112,8 +111,8 @@ function renderApp() {
           <i data-lucide="map-pin" class="text-white w-6 h-6"></i>
         </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 font-outfit">HuantaStatus</span>
-          <span class="text-[10px] text-emerald-400 font-bold tracking-widest uppercase">La Esmeralda de los Andes</span>
+          <span class="text-xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 font-outfit">HuantaTour</span>
+          <span class="text-[10px] text-emerald-400 font-bold tracking-widest uppercase">La Bella Esmeralda de los Andes</span>
         </div>
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
@@ -137,7 +136,7 @@ function renderApp() {
         </div>
         <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
           Explora la Bella <br/>
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500">Huanta.</span>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-500"> Esmeralda de los Andes.</span>
         </h1>
         <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
           Conoce la afluencia y el encanto de los ${zones.length} destinos más emblemáticos. Haz clic para ampliar.

@@ -8,7 +8,7 @@
 
 ## 🚀 Características Principales
 
-- **📸 Catálogo de 25 Zonas Turísticas**: Desde el místico Bosque de Piedras de Laupay hasta el imponente Nevado de Razuhuillca.
+- **📸 Catálogo de 24 Zonas Turísticas**: Desde el místico Bosque de Piedras de Laupay hasta el imponente Nevado de Razuhuillca.
 - **📊 Estado en Tiempo Real (Simulado)**: Visualiza la afluencia de personas y el estado de apertura de cada lugar destacados.
 - **🔍 Filtrado Inteligente**: Explora categorías como Naturaleza, Cultura, Religioso, Ciudad y Miradores.
 - **🖼️ Visor Premium (Lightbox)**:
