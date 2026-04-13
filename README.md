@@ -7,16 +7,16 @@
 ---
 
 ## 🚀 Características Principales
-
-- **📸 Catálogo de 24 Zonas Turísticas**: Desde el místico Bosque de Piedras de Laupay hasta el imponente Nevado de Razuhuillca.
-- **📊 Estado en Tiempo Real (Simulado)**: Visualiza la afluencia de personas y el estado de apertura de cada lugar destacados.
-- **🔍 Filtrado Inteligente**: Explora categorías como Naturaleza, Cultura, Religioso, Ciudad y Miradores.
+- **📸 Catálogo de 25 Zonas Turísticas**: Desde el místico Bosque de Piedras de Laupay hasta el imponente Nevado de Razuhuillca.
+- **📍 Rutas GPS Dinámicas**: Nueva sección con mapas interactivos integrados y trazado de rutas directo a Google Maps.
+- **🧱 Diseño Masonry Inteligente**: Galería de rutas que se adapta dinámicamente al contenido, eliminando espacios vacíos y mejorando el flujo visual.
+- **📊 Estado en Tiempo Real (Simulado)**: Visualiza la afluencia de personas y el estado de apertura de cada destino en tiempo real.
+- **🔍 Filtrado Inteligente**: Explora categorías como Naturaleza, Cultura, Religioso, Ciudad y Miradores con un solo clic.
 - **🖼️ Visor Premium (Lightbox)**:
-  - Navegación hero mediante flechas laterales.
-  - **Soporte de gestos táctiles (Swipe)** para dispositivos móviles.
-  - Descripciones detalladas y culturales extraídas de fuentes oficiales.
-- **📱 Responsividad Total**: Diseño optimizado para la mejor visualización en smartphones, tablets y escritorio.
-- **✨ Estética Emerald**: Diseño moderno basado en *Glassmorphism* con una paleta de colores inspirada en el verdor de Huanta.
+  - Navegación hero mediante flechas y soporte de gestos táctiles (**Swipe**).
+  - Descripciones culturales detalladas y fotografías de alta resolución.
+- **📱 Responsividad Extrema**: Interfaz optimizada meticulosamente para smartphones, tablets y pantallas Ultra-Wide.
+- **✨ Estética Emerald**: Diseño moderno basado en *Glassmorphism* con micro-interacciones y efectos de profundidad.
 
 ---
 

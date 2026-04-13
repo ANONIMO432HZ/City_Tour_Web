@@ -144,9 +144,9 @@ function renderCatalog() {
 
 function renderMapCatalog() {
   return `
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="columns-1 lg:columns-2 gap-10">
       ${zones.map(zone => `
-        <div class="bg-slate-900/60 border-2 border-white/5 rounded-[3rem] p-8 lg:p-10 flex flex-col gap-8 transition-all hover:border-emerald-500/30 shadow-2xl ${activeMapId === zone.id ? 'border-emerald-500/50 scale-[1.02]' : ''}">
+        <div class="break-inside-avoid mb-10 w-full bg-slate-900/60 border-2 border-white/5 rounded-[3rem] p-8 lg:p-10 flex flex-col gap-8 transition-all hover:border-emerald-500/30 shadow-2xl ${activeMapId === zone.id ? 'border-emerald-500/50 scale-[1.02]' : ''}">
           <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-6">
             <div class="flex items-center gap-5 flex-1 min-w-0">
                <div class="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-white/5 rounded-[2rem] flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-2xl group/thumb relative transition-all duration-500 hover:border-emerald-500/40">

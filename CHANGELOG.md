@@ -8,11 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2026-04-13
 
 ### Added
-- Implementation of image modal logic and refactor of modal UI for improved responsiveness.
-- HuantaTour catalog initialization with location data and status configuration.
+- **Rutas GPS Section**: Interactive map integration with direct Google Maps navigation links.
+- **Masonry Layout**: Implemented dynamic columns for the map catalog to prevent empty spaces and improve visual flow.
+- **Premium Thumbnails**: Redesigned GPS route thumbnails with squircle shapes, "flex-shrink" protection, and hover zoom effects.
 
 ### Changed
-- Updated branding to **HuantaTour** and reformatted HTML structure for consistency across the application.
+- **Unified Brand & UI**: Standardized navbar typography (uppercase) and global font consistency.
+- **UX Refinements**: Improved title wrapping logic and responsive font sizing for destination cards.
+- **Branding**: Updated to **HuantaTour** and reformatted HTML structure for consistency across the application.
 
 ## [1.0.0] - 2026-04-12
 
