@@ -2,9 +2,9 @@
 
 ## Phase 1: Foundation (Data & Store)
 
-- [ ] 1.1 Crear `src/data/destinos.js` extrayendo la data de `imageFiles` y `statusConfig`.
-- [ ] 1.2 Crear `src/store.js` con el patrón Store (state, setState, subscribe).
-- [ ] 1.3 Configurar el estado inicial (view: 'catalogo', filter: 'Todos', activeZoneId: null).
+- [x] 1.1 Crear `src/data/destinos.js` extrayendo la data de `imageFiles` y `statusConfig`.
+- [x] 1.2 Crear `src/store.js` con el patrón Store (state, setState, subscribe).
+- [x] 1.3 Configurar el estado inicial (view: 'catalogo', filter: 'Todos', activeZoneId: null).
 
 ## Phase 2: Component Implementation
 
