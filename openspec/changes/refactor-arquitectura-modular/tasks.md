@@ -8,10 +8,10 @@
 
 ## Phase 2: Component Implementation
 
-- [ ] 2.1 Crear `src/components/Navbar.js` como componente modular.
-- [ ] 2.2 Crear `src/components/Hero.js` que reaccione al cambio de vista.
-- [ ] 2.3 Crear `src/components/Catalog.js` encapsulando filtros y grilla de cards.
-- [ ] 2.4 Crear `src/components/Modal.js` manejando el estado de `activeZoneId`.
+- [x] 2.1 Crear `src/components/Navbar.js` como componente modular.
+- [x] 2.2 Crear `src/components/Hero.js` que reaccione al cambio de vista.
+- [x] 2.3 Crear `src/components/Catalog.js` encapsulando filtros y grilla de cards.
+- [x] 2.4 Crear `src/components/Modal.js` manejando el estado de `activeZoneId`.
 
 ## Phase 3: Integration & Wiring
 
