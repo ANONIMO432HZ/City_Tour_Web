@@ -1,4 +1,5 @@
 import './style.css';
+import { store } from './store.js';
 import { Navbar } from './components/Navbar.js';
 import { Hero } from './components/Hero.js';
 import { Catalog } from './components/Catalog.js';

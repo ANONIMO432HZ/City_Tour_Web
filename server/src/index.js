@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import tourRoutes from './routes/tours.js';
+import bookingRoutes from './routes/booking.js';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api', tourRoutes);
+app.use('/api', bookingRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
