@@ -15,9 +15,9 @@
 
 ## Phase 3: Integration & Wiring
 
-- [ ] 3.1 Refactorizar `src/main.js` para inicializar el Store y montar los componentes.
-- [ ] 3.2 Limpiar `index.html` eliminando scripts redundantes y handlers `window.*`.
-- [ ] 3.3 Implementar re-inicialización de Lucide Icons en el ciclo de actualización de componentes.
+- [x] 3.1 Refactorizar `src/main.js` para inicializar el Store y montar los componentes.
+- [x] 3.2 Limpiar `index.html` eliminando scripts redundantes y handlers `window.*`.
+- [x] 3.3 Implementar re-inicialización de Lucide Icons en el ciclo de actualización de componentes.
 
 ## Phase 4: Verification & Cleanup
 
