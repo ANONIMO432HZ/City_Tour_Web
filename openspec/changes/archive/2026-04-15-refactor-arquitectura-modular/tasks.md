@@ -21,7 +21,7 @@
 
 ## Phase 4: Verification & Cleanup
 
-- [ ] 4.1 Verificar persistencia de vistas al navegar (Catálogo <-> Rutas GPS).
-- [ ] 4.2 Probar reactividad de filtros en el componente `Catalog`.
-- [ ] 4.3 Validar apertura de Modal y navegación interna (flechas/swipe).
-- [ ] 4.4 Eliminar el código legacy comentado en `main.js`.
+- [x] 4.1 Verificar persistencia de vistas al navegar (Catálogo <-> Rutas GPS).
+- [x] 4.2 Probar reactividad de filtros en el componente `Catalog`.
+- [x] 4.3 Validar apertura de Modal y navegación interna (flechas/swipe).
+- [x] 4.4 Eliminar el código legacy comentado en `main.js`.
