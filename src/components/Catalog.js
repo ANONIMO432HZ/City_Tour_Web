@@ -9,7 +9,33 @@ export class Catalog {
   }
 
   render() {
-    const { view, filter, zones, activeMapId } = this.store.getState();
+    const { view, filter, zones, activeMapId, loading, error } = this.store.getState();
+
+    if (loading) {
+      this.container.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-40 animate-pulse">
+           <div class="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="refresh-cw" class="text-emerald-500 w-10 h-10 animate-spin"></i>
+           </div>
+           <p class="text-emerald-500 font-black uppercase tracking-[0.3em]">Conectando con InkaExplore DB...</p>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+      return;
+    }
+
+    if (error) {
+      this.container.innerHTML = `
+        <div class="bg-red-500/10 border border-red-500/20 p-10 rounded-[2rem] text-center my-20">
+          <i data-lucide="alert-circle" class="text-red-500 w-12 h-12 mx-auto mb-4"></i>
+          <h3 class="text-2xl font-black text-white mb-2">Error de Conexión</h3>
+          <p class="text-slate-400 font-medium">${error}</p>
+        </div>
+      `;
+      if (window.lucide) window.lucide.createIcons();
+      return;
+    }
+
     const filteredZones = filter === 'Todos' ? zones : zones.filter(z => z.category === filter);
 
     this.container.innerHTML = view === 'catalogo' 

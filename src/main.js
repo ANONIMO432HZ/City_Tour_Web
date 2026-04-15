@@ -16,6 +16,9 @@ function initApp() {
   const catalog = new Catalog(catalogContainer);
   const modal = new Modal(modalElement);
 
+  // Cargar datos desde la API
+  store.fetchInitialData();
+
   // Montar componentes
   navbar.mount();
   hero.mount();
