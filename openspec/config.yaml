@@ -1,0 +1,39 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Vanilla JS, Vite, Tailwind CSS 4, Lucide Icons.
+  Architecture: Monolithic main.js, global object pollution, inefficient innerHTML re-renders.
+  Testing: None (no runner detected).
+  Style: Functional/Procedural JS.
+
+strict_tdd: false
+
+rules:
+  proposal:
+    - Include component breakdown for refactor
+    - Separate data from logic
+  specs:
+    - Focus on component contracts and event handling
+  design:
+    - Use sequence diagrams for state changes
+  tasks:
+    - Atomic commits per component refactored
+  apply:
+    - Avoid global scope/window pollution
+  verify:
+    - Manual check of all interaction flows (no tests)
+  archive:
+    - Ensure README reflects new structure
+
+testing:
+  strict_tdd: false
+  capabilities:
+    test_runner: NOT FOUND
+    layers:
+      unit: false
+      integration: false
+      e2e: false
+    quality_tools:
+      linter: false
+      type_checker: false
+      formatter: false
